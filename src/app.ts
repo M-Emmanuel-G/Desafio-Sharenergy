@@ -22,6 +22,6 @@ app.listen(3003, () => {
 
 app.get('/clients', showClients)
 app.get('/clients/:id', searchClientsById)
-app.post('/clients', createClient)
+app.post('/clients/create', createClient)
 app.patch('/clients/:id', updateClients)
 app.delete('/clients/:id', deleteClients)
