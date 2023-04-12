@@ -17,3 +17,9 @@ Aplicação
 * Interface amigável, bonita e limpa
 * Responsividade
 * Clean Code
+
+## Rodando Locamente
+
+* execute o comando NPM  INSTALL
+* crie um arquivo .ENV, dentro dela, crie uma variável com o nome MONGODB. 
+* Nesta variável, insira as informações do seu banco de dados( MONGODB ) 
