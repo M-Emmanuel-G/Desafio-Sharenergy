@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import { ClientModel } from "../models/schema";
+import { IdGenerator } from "../services/idGenerator";
 
 export const createClient = async (req:Request, res:Response) => {
     const {name,email, phone, address, cpf} = req.body;
@@ -32,8 +33,6 @@ export const createClient = async (req:Request, res:Response) => {
             errorCode = 422
             return res.status(errorCode).json({ message : 'Nome e(ou) email e(ou) address devem ser do tipo string.'})
         }
-
-     
         
         await ClientModel.create({name,email,phone,address,cpf})
         return res.status(200).send('Cliente cadastrado com sucesso...');
